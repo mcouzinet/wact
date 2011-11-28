@@ -1,0 +1,609 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+/* FONT FACE */
+@font-face {
+  font-family: 'AvantGarde';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ITCAvantGardePro-Demi'), url('font/ITCAvantGardePro-Demi.otf') format('truetype');
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: Mickael COUZINET
+   ========================================================================== */
+
+
+
+/* GLOBAL */
+
+body{
+  font: 13px/1.5 Helvetica Neue,Arial,Helvetica,sans-serif;
+  background: url(img/back.jpg) repeat top left #b1d6e5;
+}
+
+.wrapper{
+  max-width:960px;
+  width:80%;
+  margin:auto;
+}
+
+/* Header */
+#header-container{
+  width:100%;
+  height:34px;
+  position:fixed;
+  z-index:100;
+  top:0;
+  background-color:#1d2737;
+  background:-webkit-linear-gradient(#444d5a,#2e3642);
+  background:   -moz-linear-gradient(#444d5a,#2e3642);
+  background:    -ms-linear-gradient(#444d5a,#2e3642);
+  background:     -o-linear-gradient(#444d5a,#2e3642);
+  background:        linear-gradient(#444d5a,#2e3642);
+  -webkit-box-shadow:0 1px 2px rgba(0,0,0,.7);
+          box-shadow:0 1px 2px rgba(0,0,0,.7);
+}
+
+header h1#title{
+  margin:4px 0 0 0;
+  padding-left:130px;
+  display:inline-block;
+  width:120px;
+  height:32px;
+  color:#fff;
+  background: url(img/wact.png) no-repeat top left;
+  float:left;
+  font-size:1em;
+  line-height:14px;
+  text-shadow:0 1px 2px rgba(0,0,0,.7);
+  font-weight:normal;
+}
+
+header a{
+  text-decoration:none;
+}
+
+header h1#title span{
+  color:#29abe2;
+}
+
+header ul{
+  float:right;
+  overflow:hidden;
+  display:block;
+  height:50px;
+}
+
+header li{
+  display:inline-block;
+  border-left:1px solid #ccc;
+  margin-top:7px;
+}
+
+header li:first-child{
+  border-left:none;
+}
+
+header li a,header li a:visited{
+  padding:4px 7px;
+  margin:10px;
+  color:#ccc;
+  text-decoration:none;
+  text-shadow:0 1px 2px rgba(0,0,0,.7);
+  font-weight:normal;
+}
+
+header li a:hover,header li a:focus{
+  color:#fff;
+  background:-webkit-linear-gradient(#29abe2,#0078ab);
+  background:   -moz-linear-gradient(#29abe2,#0078ab);
+  background:    -ms-linear-gradient(#29abe2,#0078ab);
+  background:     -o-linear-gradient(#29abe2,#0078ab);
+  background:        linear-gradient(#29abe2,#0078ab);
+  -webkit-box-shadow:0 1px 2px rgba(0,0,0,.7);
+	      box-shadow:0 1px 2px rgba(0,0,0,.7);
+  -webkit-border-radius: 0 10px 0 10px;
+		  border-radius: 0 10px 0 10px;
+}
+
+header li.callTo{
+  margin:0;
+  border:0;
+  height:38px;
+  width:145px;
+  float:right;
+  padding:2px 0 0 35px;
+  -webkit-border-radius:0 0 10px 10px;
+		  border-radius:0 0 10px 10px;
+  background:-webkit-linear-gradient(#29abe2,#0078ab);
+  background:   -moz-linear-gradient(#29abe2,#0078ab);
+  background:    -ms-linear-gradient(#29abe2,#0078ab);
+  background:     -o-linear-gradient(#29abe2,#0078ab);
+  background:        linear-gradient(#29abe2,#0078ab);
+  -webkit-box-shadow:0 1px 2px rgba(0,0,0,.7);
+	      box-shadow:0 1px 2px rgba(0,0,0,.7);
+}
+
+header li.callTo a,header li.callTo a:visited{
+  margin:0;
+  color:#fff;
+  display:inline-block;
+  position:relative;
+  font-size:16px;
+  font-weight:bold;
+  text-shadow:0 1px 2px rgba(0,0,0,.7);
+}
+
+header li.callTo a:hover,header li.callTo a:focus{
+  background:none;
+  -webkit-box-shadow:none;
+	      box-shadow:none;
+  -webkit-border-radius:0;
+		  border-radius:0;
+}
+
+header li.callTo span{
+  position:absolute;
+  left:-20px;
+  top:11px;
+  font-size:40px;
+  line-height:0px;
+  font-weight:bold;
+}
+
+#navLink{
+  display:none;
+}
+/* FILTRE */
+
+#filtre{ 
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:30px;
+  z-index:102;
+  background-color:#1d2737;
+  background:-webkit-linear-gradient(#2e3642,#444d5a);
+  background:   -moz-linear-gradient(#2e3642,#444d5a);
+  background:    -ms-linear-gradient(#2e3642,#444d5a);
+  background:     -o-linear-gradient(#2e3642,#444d5a);
+  background:        linear-gradient(#2e3642,#444d5a);
+  -webkit-box-shadow:0 1px 2px rgba(0,0,0,.7);
+          box-shadow:0 1px 2px rgba(0,0,0,.7);
+}
+
+#filtre li{ 
+  display:inline;
+  color:#fff;
+  font-family:AvantGarde,Helvetica Neue,Arial,Helvetica,sans-serif;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:41px;
+  margin:0 30px;
+}
+
+/* LINKS */
+
+#main{
+  margin-top:34px;
+  position:relative;
+  overflow:hidden;
+  background-color:white;
+  -webkit-box-shadow:0 0 20px rgba(0,0,0,.7);
+          box-shadow:0 0 20px rgba(0,0,0,.7);
+}
+
+#main::before{
+	content:'';
+	display:block;
+	position:absolute;
+	right:20px;
+	top:-34px;
+	height:110%;
+	width:5px;
+	background-color:#369;
+	-webkit-box-shadow:0 3px 4px rgba(0,0,0,.7);
+		    box-shadow:0 3px 4px rgba(0,0,0,.7);
+} 
+
+.score{
+  width:100%;
+  background-color:#fff;
+  padding-top:10px;
+  overflow:hidden;
+  position:relative;
+  margin:1px 0;
+  -webkit-box-shadow:0 3px 4px rgba(0,0,0,.7);
+		  box-shadow:0 3px 4px rgba(0,0,0,.7);		
+}
+
+.link{
+  position:relative;
+  width:95%;
+}
+
+.link::before{
+  content:'';
+  display:block;
+  position:absolute;
+  right:-23px;
+  top:50%;
+  height:2px;
+  width:80px;
+  background-color:#369;
+  -webkit-box-shadow:0 1px 4px rgba(0,0,0,.7);
+		  box-shadow:0 1px 4px rgba(0,0,0,.7);
+}
+
+.titre{
+  position:relative;
+  z-index:30;
+}
+
+.titre a{
+  color:#283a57;
+  text-decoration:none;
+  margin:30px;
+  font-family:AvantGarde,Helvetica Neue,Arial,Helvetica,sans-serif;
+}
+
+span.cat{
+  position:absolute;
+  color:#adf;
+  top:-20px;
+  right:-20px;
+  font-family:AvantGarde;
+  text-transform:uppercase;
+  font-weight:bold;
+  z-index:0;
+}
+
+.poid{
+  position:absolute;
+  z-index:1;
+  color:#39c;
+  bottom:-50px;
+  font-family:AvantGarde,Helvetica Neue,Arial,Helvetica,sans-serif;
+  text-transform:uppercase;
+  font-weight:bold;
+  line-height:120px;
+  right:0px;
+}
+
+    .un .poid{font-size:4.5em; letter-spacing:-5px; }
+  .deux .poid{font-size:6.0em; letter-spacing:-10px;}
+ .trois .poid{font-size:7.5em; letter-spacing:-15px;}
+.quatre .poid{font-size:9.0em; letter-spacing:-20px;}
+  .cinq .poid{font-size:10.5em;letter-spacing:-25px;}
+
+    .un .titre{font-size:1.2em;}
+  .deux .titre{font-size:1.6em;}
+ .trois .titre{font-size:2.0em;}
+.quatre .titre{font-size:2.4em;}
+  .cinq .titre{font-size:2.8em;}
+
+    .un .cat{font-size:3.0em;}
+  .deux .cat{font-size:3.5em;}
+ .trois .cat{font-size:4.0em;}
+.quatre .cat{font-size:4.5em;}
+  .cinq .cat{font-size:5.0em;}
+
+/*
+.cat1 .titre a{color:#003;}
+.cat2 .titre a{color:#300;}
+.cat3 .titre a{color:#030;}
+.cat4 .titre a{color:#303;}
+
+.cat1 .poid,.cat1 .footer-link a{color:#339;}
+.cat2 .poid,.cat2 .footer-link a{color:#933;}
+.cat3 .poid,.cat3 .footer-link a{color:#393;}
+.cat4 .poid,.cat4 .footer-link a{color:#939;}
+
+.cat1 .cat{color:#ccf;}
+.cat2 .cat{color:#fcc;}
+.cat3 .cat{color:#cfc;}
+.cat4 .cat{color:#fcf;}
+*/
+.footer-link{
+  margin-left:20px;
+}
+
+.postor a, .nbcom a{
+  color:#39c;
+  text-decoration:none;
+}
+
+.postor, .source, .nbcom{
+  display:inline-block;
+  color:#999;
+  padding:0 10px;
+  height:15px;
+  line-height:15px;
+}
+
+.source, .nbcom{
+
+  border-left:1px solid #999;
+}
+
+/* Articles */
+.content{
+  height:100%;
+}
+
+iframe {
+  height:700px;
+  position:absolute;
+  z-index:-3;
+  top:24px;
+}
+
+/* Commentaires */
+
+#commentaires{
+  background-color:#fff;
+  display:block;
+  width:34px;
+}
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+/* =============================================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
