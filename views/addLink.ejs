@@ -1,0 +1,45 @@
+<div id="header-container">
+	<header class="wrapper">
+	    <a href="http://www.wact.fr:3000/Populaire" title="Wact"><h1 id="title">le partage de lien <span>simple</span> et <span>rapide</span></h1></a>
+		<nav>
+			<ul id="navSite">
+				<li id="btNouveau"><a href="http://www.wact.fr:3000/nouveau">Nouveau</a></li>
+				<li id="btPopulaire"><a href="http://www.wact.fr:3000/Populaire">Populaire</a></li>
+				<li id="InfoCompte"><a href="#">Mikado (2)</a>
+					<div id="sousMenu" class="none">
+						<ul>
+							<li><a href="#">Mon profil</a></li>
+							<li><a href="#">Classement</a></li>
+							<li><a href="#">Déconnexion</a></li>
+						</ul>
+					</div>
+				</li>
+				<li id="btRetour" class="callTo"><a href="http://www.wact.fr:3000/Populaires"><span>-</span> Retour</a><li>
+			</ul>	
+			<div class="lightbox"></div>
+		</nav>
+	</header>
+</div>
+<div id="main" class="wrapper">
+		<div id="boiteAdd">
+			<form action="http://www.wact.fr:3000/AddLink" method="post" autocomplete="on">
+				<p><span>Titre</span></p>		
+				<input type="text" name="titre" value="" class="champ">
+				<p><span>Lien</span></p>
+				<input type="text" name="lien" value="" class="champ">
+				<div id="boiteRadio">
+					<input name="choix" id="Design" type="radio" value="Design" /> 
+					<label for="Design" class="checkbox">Design</label> 
+					<input name="choix" id="Ebussiness" type="radio" value="Ebussiness" /> 
+					<label for="Ebussiness" class="checkbox">E-business</label> <br>
+					<input name="choix" id="Technique" type="radio" value="Technique" /> 
+					<label for="Technique" class="checkbox">Technique</label> 					
+					<input name="choix" id="Fun" type="radio" value="Fun" /> 
+					<label for="Fun" class="checkbox">Fun</label>
+				</div>
+				<input type="submit" value="Rajoutez un lien" class="valid"/>
+			</form>
+		</div>
+</div>
+
+	

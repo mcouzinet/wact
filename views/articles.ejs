@@ -1,0 +1,36 @@
+<div id="header-container">
+	<header class="wrapper">
+		<a href="http://www.wact.fr:3000/Populaire" title="Wact"><h1 id="title">le partage de lien <span>simple</span> et <span>rapide</span></h1></a>
+		<nav>
+			<ul id="navSite">
+				<li id="btNouveau"><a href="http://www.wact.fr:3000/nouveau">NouveauPD</a></li>
+				<li id="btPopulaire"><a href="http://www.wact.fr:3000/Populaire">Populaire</a></li>
+				<li><a href="#">Mikado (2)</a>
+					<ul class="none" id="InfoCompte">
+						<li><a href="#">Mon profil</a></li>
+						<li><a href="#">Déconnexion</a></li>
+						<li><a href="#">Classement</a></li>
+					</ul>
+				</li>
+				<li id="addLink" class="callTo"><a href="http://www.wact.fr:3000/addLink"><span>+ </span>Ajouter un lien</a><li>
+			</ul>
+			<div class="lightbox"></div>
+		</nav>
+	</header>
+</div>
+<div id="main" class="wrapper">
+<% for(var i=0; i<links.length; i++) {%>
+	<div class="link">
+		<div class="score deux <%- links[i].catégorie %>">
+			<div class="titre"><a href="http://www.wact.fr:3000/Act/<%- links[i].title %>"><%- links[i].title %></a></div>
+			<div class="footer-link">
+				<div class="postor">Par <a href="#"><%- links[i].author %></a> il y a <%- links[i].temps.d %> <%- links[i].temps.f %></div>
+				<div class="nbcom"><a href="#" title="commentaires du lien"><%- links[i].comments.length %> commentaires</a></div>
+				<span class="source"><%- links[i].source %></span>
+			</div>
+			<span class="cat"><%- links[i].catégorie %></span>
+			<span class="poid"><%- links[i].score %></span>
+		</div>
+	</div>
+<% } %>
+</div>
